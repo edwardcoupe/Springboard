@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 1700px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: fadeCarousel 28s infinite;
+    }
+
+    .slide:nth-child(1) { animation-delay: 0s; }
+    .slide:nth-child(2) { animation-delay: 7s; }
+    .slide:nth-child(3) { animation-delay: 14s; }
+    .slide:nth-child(4) { animation-delay: 21s; }
+
+    @keyframes fadeCarousel {
+      0% { opacity: 0; z-index: 0; }
+      5% { opacity: 1; z-index: 1; }
+      25% { opacity: 1; z-index: 1; }
+      30% { opacity: 0; z-index: 0; }
+      100% { opacity: 0; z-index: 0; }
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-button {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      padding: 10px 20px;
+      background-color: #FFFFFF;
+      color: #ff0000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      opacity: 0.85;
+    }
+
+    .carousel-button:hover {
+      opacity: 1;
+      background-color: #9C9C9C;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="slide">
+      <img src="https://raw.githubusercontent.com/edwardcoupe/Springboard/main/Client%20converstaions2.png?raw=true">
+      <a href="https://springboardbainsandbox.docebosaas.com/learn/courses/1740/building-client-relationships" class="carousel-button">View course</a>
+    </div>
+    <div class="slide">
+      <img src="https://raw.githubusercontent.com/edwardcoupe/Springboard/main/Ivan%20(1).png?raw=true">
+      <a href="https://example.com/link2" class="carousel-button">Watch video</a>
+    </div>
+    <div class="slide">
+      <img src="https://raw.githubusercontent.com/edwardcoupe/Springboard/main/Linked%20in%20learning.png?raw=true">
+      <a href="https://example.com/link3" class="carousel-button">View content</a>
+    </div>
+    <div class="slide">
+      <img src="https://raw.githubusercontent.com/edwardcoupe/Springboard/main/Sandy%20Hero.png?raw=true">
+    </div>
+  </div>
+</body>
+</html>
