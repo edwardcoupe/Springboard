@@ -1,0 +1,179 @@
+/*Hide "Add to Playlist" in course player */
+button.dcb-course-header-more-options[aria-label="More options"] {
+  display: none;
+}
+
+/*Hide "Add to Playlist" in course overview */
+
+button[aria-label="Add to playlist"] {
+  display: none;
+}
+
+/*Hide "Add to Playlist" in Actions menu*/
+
+doc-widget-my-courses-and-learning-plans ui-card-footer.ui-card-footer {
+
+    display: none;
+
+}
+
+/*Hide "Add to Playlist" in Actions menu */
+
+doc-layout-action-buttons button[aria-label="Add to Playlist"] {
+
+    display: none;
+
+}
+
+/** Remove Mark As Outdated From Course Player View **/
+lrn-course-player .dcb-course-header-mark-as-outdated {
+    display: none !important;
+}
+
+
+/* Hide 'Mark as outdated' in Course Overview Page */
+.dcb-content-overview-header-mark-as-outdated  {
+    display: none !important;
+}
+
+
+/* hide 3 dot button on course cards in homepage view */
+.ui-carousel-items-track .ui-ripple {
+display: none;
+
+}
+
+/* hide 3 dot button on course cards in mycourses + catalog view */
+.my-courses-and-learning-plans-content-wrapper .ui-card-wrapper  .ui-ripple {
+display: none;
+
+}
+
+/*hide share content*/
+doc-layout-action-buttons #contribute, doc-layout-action-buttons #asktheexperts {display: none;}
+
+/* Hide Page Title and Description*/
+#doc-layout-title-bar {
+    display: none !important;
+}
+/* Hides the languages code and seperator on Course Lists START */
+.ui-list-item-language,
+.ui-list-item-language+.ui-list-item-separator {
+    display: none !important;
+}
+/* Hides the languages code and seperator on Course Lists END */
+
+/* Hides the languages code and seperator on Course Cards START */
+
+.ui-card-language,
+.ui-card-language+.ui-card-separator {
+    display: none !important;
+}
+
+/* Hides the languages code and separator on Course Cards END */
+
+
+/** Remove the SELECT IMAGE button from profile block **/
+div.direction ui-button-outlined {
+    display: none;
+}
+
+/** Remove Avatar box from My Profile **/
+lrn-my-profile-personal-info {
+    display: none;
+}
+
+/**Remove avatar from user menu**/
+.user-menu-wrapper .ui-avatar-wrapper {display: none;}
+
+/**remove profile photo**/
+.user-report-info-image {
+    display: none;
+}
+.user-report-info-data{
+    margin-left: 0;
+}
+
+/**hide profile in my teams manager view**/
+.ui-avatar-wrapper {display:none !important;}
+
+/*Hide add to playlist*/
+#invitetowatch {display: none!important;}
+
+/* === Carousel Fix for HP === */
+
+#doc-widget-331 .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1700px;
+  height: 250px;
+  overflow: hidden;
+}
+
+#doc-widget-331 .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fadeCarousel 28s infinite;
+}
+
+#doc-widget-331 .slide:nth-child(1) { animation-delay: 0s; }
+#doc-widget-331 .slide:nth-child(2) { animation-delay: 7s; }
+#doc-widget-331 .slide:nth-child(3) { animation-delay: 14s; }
+#doc-widget-331 .slide:nth-child(4) { animation-delay: 21s; }
+
+@keyframes fadeCarousel {
+  0%   { opacity: 0; z-index: 0; }
+  3%   { opacity: 1; z-index: 1; }
+  22%  { opacity: 1; z-index: 1; }
+  25%  { opacity: 0; z-index: 0; }
+  100% { opacity: 0; z-index: 0; }
+}
+
+#doc-widget-331 .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+#doc-widget-331 .carousel-button {
+  position: absolute;
+  bottom: 20px;
+  left: 575px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #ff0000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+#doc-widget-331 .carousel-button:hover {
+  opacity: 1;
+  background-color: #9C9C9C;
+}
+
+#doc-widget-331 .carousel {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  left: 0 !important;
+}
+
+#doc-widget-331 .slide {
+  left: 0 !important;
+}
+
+#doc-widget-331 .wrapper-shadow,
+#doc-widget-331 .content,
+#doc-widget-331 .htmlwidget,
+#doc-widget-331 .widget-render-column,
+#doc-widget-331 .widget-render-row {
+  overflow: visible !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
